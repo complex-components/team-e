@@ -6,6 +6,7 @@ import UploaderComponent from './uploader.js';
 class ImageBoardComponent extends Component {
   constructor() {
     super();
+    this.defaultStyle = {display: "flex", flexDirection: "column"};
     this.state = {
       posts: [
         {imageDataUrl: "http://lorempixel.com/200/150", postText: "FIRST!!1"},
@@ -19,8 +20,10 @@ class ImageBoardComponent extends Component {
     });
   }
   render() {
+    const style = {};
+    Object.assign(style, this.defaultStyle, this.props.style);
     return (
-      <div style={{display: "flex", flexDirection: "column"}}>
+      <div style={style}>
         <UploaderComponent addPostCallback={(post) => this._addPost(post)} />
         {this.state.posts.map((post, index) => <PostComponent key={index} imageDataUrl={post.imageDataUrl} postText={post.postText} />)}
       </div>
