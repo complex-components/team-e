@@ -11,7 +11,7 @@ class PostComponent extends Component {
         if (this.state.expand) {
             return {maxWidth: "90%"};
         } else {
-            return {maxWidth: "200px", maxHeight: "200px"};
+            return {maxWidth: "200px", maxHeight: "200px", marginLeft: "20px"};
         }
     }
     _toggleExpand() {
@@ -22,7 +22,7 @@ class PostComponent extends Component {
             <div style={{display: "flex", flexDirection: "row", margin: "5px", padding: "5px", backgroundColor: "#EECCCC"}}>
                 <Votes />
                 <div style={this._getImageStyle()}>
-                    <img className="image" src={this.props.imageDataUrl} alt="" style={{maxWidth: "100%", maxHeight: "100%", marginLeft: "20px"}} onClick={() => this._toggleExpand()} />
+                    <img className="image" src={this.props.imageDataUrl} alt="" style={{maxWidth: "100%", maxHeight: "100%"}} onClick={() => this._toggleExpand()} />
                 </div>
                 <p style={{marginLeft: "20px"}}>{this.props.postText}</p>
             </div>
