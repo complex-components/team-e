@@ -27,7 +27,7 @@ class UploaderComponent extends Component {
     }
     render() {
         return (
-            <div style={{display: "flex", flexDirection: "column", padding: "10px", backgroundColor: "#EECCCC"}}>
+            <div style={{display: "flex", flexDirection: "column", padding: "5px", backgroundColor: "#EECCCC"}}>
                 <p>Add a nice post: </p>
                 <textarea rows="5" cols="60" onChange={(e)=>this._handleTextChange(e)} />
                 <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>

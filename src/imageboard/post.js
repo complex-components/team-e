@@ -11,8 +11,8 @@ class PostComponent extends Component {
         return (
             <div style={{display: "flex", flexDirection: "row", margin: "5px", padding: "5px", backgroundColor: "#EECCCC"}}>
                 <Votes />
-                <img className="image" src={this.props.imageDataUrl} alt="" style={{maxWidth: "200px", maxHeight: "200px"}} />
-                <p>{this.props.postText}</p>
+                <img className="image" src={this.props.imageDataUrl} alt="" style={{maxWidth: "200px", maxHeight: "200px", marginLeft: "20px"}} />
+                <p style={{marginLeft: "20px"}}>{this.props.postText}</p>
             </div>
         );
     }

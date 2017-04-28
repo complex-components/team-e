@@ -6,7 +6,7 @@ import UploaderComponent from './uploader.js';
 class ImageBoardComponent extends Component {
   constructor() {
     super();
-    this.defaultStyle = {display: "flex", flexDirection: "column"};
+    this.defaultStyle = {display: "flex", flexDirection: "column", width: "70%"};
     this.state = {
       posts: []
     };
