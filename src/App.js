@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FantasticComponent from './fantastic-component'
+import ImageboardComponent from './imageboard'
 import logo from './logo.svg'
 import './App.css'
 
@@ -12,7 +12,7 @@ class App extends Component {
           <h2>Team E!</h2>
         </div>
         <div className='component-test'>
-          <FantasticComponent />
+          <ImageboardComponent />
         </div>
       </div>
     )
