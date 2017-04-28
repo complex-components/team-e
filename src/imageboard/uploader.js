@@ -27,10 +27,13 @@ class UploaderComponent extends Component {
     }
     render() {
         return (
-            <div>
-                <input type="file" onChange={(e)=>this._handleImageChange(e)}/>
-                <input type="textarea" onChange={(e)=>this._handleTextChange(e)} />
-                <input type="submit" onClick={(e)=>this.props.addPostCallback(this.state)} />
+            <div style={{display: "flex", flexDirection: "column", padding: "10px", backgroundColor: "#EECCCC"}}>
+                <p>Add a nice post: </p>
+                <textarea rows="5" cols="60" onChange={(e)=>this._handleTextChange(e)} />
+                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                    <input type="file" onChange={(e)=>this._handleImageChange(e)}/>
+                    <input type="submit" onClick={(e)=>this.props.addPostCallback(this.state)} />
+                </div>
             </div>
         )
     }

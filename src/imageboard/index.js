@@ -20,7 +20,7 @@ class ImageBoardComponent extends Component {
   }
   render() {
     return (
-      <div className="fantastic-component" style={{display: "flex", flexDirection: "column"}}>
+      <div style={{display: "flex", flexDirection: "column"}}>
         <UploaderComponent addPostCallback={(post) => this._addPost(post)} />
         {this.state.posts.map((post, index) => <PostComponent key={index} imageDataUrl={post.imageDataUrl} postText={post.postText} />)}
       </div>
