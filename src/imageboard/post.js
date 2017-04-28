@@ -11,7 +11,7 @@ class PostComponent extends Component {
         return (
             <div style={{display: "flex", flexDirection: "column", padding:"10px"}}>
                 <div style={{display: "flex", flexDirection: "row"}}>
-                    <img src={this.props.imageDataUrl} />
+                    <img src={this.props.imageDataUrl} alt="" />
                     <p>{this.props.postText}</p>
                 </div>
             </div>

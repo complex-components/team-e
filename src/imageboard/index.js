@@ -22,7 +22,7 @@ class ImageBoardComponent extends Component {
     return (
       <div className="fantastic-component" style={{display: "flex", flexDirection: "column"}}>
         <UploaderComponent addPostCallback={(post) => this._addPost(post)} />
-        {this.state.posts.map((post) => <PostComponent imageDataUrl={post.imageDataUrl} postText={post.postText} />)}
+        {this.state.posts.map((post, index) => <PostComponent key={index} imageDataUrl={post.imageDataUrl} postText={post.postText} />)}
       </div>
     );
   }
