@@ -8,10 +8,7 @@ class ImageBoardComponent extends Component {
     super();
     this.defaultStyle = {display: "flex", flexDirection: "column"};
     this.state = {
-      posts: [
-        {imageDataUrl: "http://lorempixel.com/200/150", postText: "FIRST!!1"},
-        {imageDataUrl: "http://lorempixel.com/200/100", postText: "Hei"},
-      ]
+      posts: []
     };
   }
   _addPost(post) {
