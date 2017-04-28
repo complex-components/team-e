@@ -15,7 +15,7 @@ class ImageBoardComponent extends Component {
   }
   _addPost(post) {
     this.setState({
-      posts: this.state.posts.concat(post)
+      posts: [post].concat(this.state.posts)
     });
   }
   render() {
