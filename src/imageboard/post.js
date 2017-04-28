@@ -5,13 +5,25 @@ import Votes from './votes.js';
 class PostComponent extends Component {
     constructor() {
         super();
-        this.state = {upvotes: 0};
+        this.state = {expand: false};
+    }
+    _getImageStyle() {
+        if (this.state.expand) {
+            return {maxWidth: "90%"};
+        } else {
+            return {maxWidth: "200px", maxHeight: "200px"};
+        }
+    }
+    _toggleExpand() {
+        this.setState({expand: !this.state.expand});
     }
     render () {
         return (
             <div style={{display: "flex", flexDirection: "row", margin: "5px", padding: "5px", backgroundColor: "#EECCCC"}}>
                 <Votes />
-                <img className="image" src={this.props.imageDataUrl} alt="" style={{maxWidth: "200px", maxHeight: "200px", marginLeft: "20px"}} />
+                <div style={this._getImageStyle()}>
+                    <img className="image" src={this.props.imageDataUrl} alt="" style={{maxWidth: "100%", maxHeight: "100%", marginLeft: "20px"}} onClick={() => this._toggleExpand()} />
+                </div>
                 <p style={{marginLeft: "20px"}}>{this.props.postText}</p>
             </div>
         );

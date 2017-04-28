@@ -16,3 +16,11 @@ it('registers upvotes', () => {
   ReactTestUtils.Simulate.click(upButton);
   expect(votes.state.votes).toEqual(1);
 });
+
+it('registers downvotes', () => {
+  const votes = ReactTestUtils.renderIntoDocument(<Votes />);
+  const downButton = votes.refs.down;
+  
+  ReactTestUtils.Simulate.click(downButton);
+  expect(votes.state.votes).toEqual(-1);
+});
